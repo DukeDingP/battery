@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Database.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/pyecharts.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/一节锂离子电池满冲满放电压.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/一节锂离子电池满冲满放电流.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/中文.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/多线程.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/清空数据库.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/满充满放实验.xlsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/监控平台.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/进程与线程.py" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

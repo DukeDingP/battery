@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>栅栏结构</title>
+		<link rel="stylesheet" href="static/css/bootstrap.css" />
+		<link rel="stylesheet" href="css/mybs.css" />
+		<script type="text/javascript" src="static/js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="static/js/bootstrap.js" ></script>
+    </head>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<div class="container">
+        <div class="row">
+            <div class="col-md-4">col-md-4</div>
+            <div class="col-md-4">col-md-4</div>
+            <div class="col-md-4">col-md-4</div>
+            <!-- 说明：每row行共12列，分个3div，每个div平占4列，即3个*4列=12列 -->
+        </div>
+
+        <div class="row">
+                <div class="col-md-3">col-md-3</div>
+                <div class="col-md-6">col-md-6</div>
+                <!-- 说明：每row行共12列，分个2div，第1个div占4列，第2个div则占8列，即4列+8列=12列 -->
+        </div>
+        <div class="row">
+                <div class="col-md-1">col-md-1</div>
+                <div class="col-md-1">col-md-1</div>
+                <div class="col-md-1">col-md-1</div>
+                <!-- 说明：每row行共12列，分个3div，每1,3个div占3列，第2个div则占6列，即3列+6列+3列=12列 -->
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-6 col-lg-3">
+                 hello world
+        </div>
+        <!--小于 768px 的时候，用 col-xs-12 类对应的样式；
+        在 768px 到 992px 之间的时候，用 col-sm-9 类对应的样式；
+        在 992px 到 1200px 之间的时候，用 col-md-6 类对应的样式；
+        大于 1200px 的时候，用 col-lg-3 类对应的样式；-->
+</div>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="static/js/echarts.min.js"></script>
+
+  </head>
+
+  <body>
+
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">梯次电池后台监控</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">主页</a></li>
+              <li><a href="#about">实时监控</a></li>
+              <li><a href="#contact">关于我们</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="navbar-form  navbar-right">
+             
+             
+              <a href="#" class="navber-link">登录</a>
+              <a href="#" class="navber-link">注册</a>
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="请输入关键字"  />
+                  <div class="input-group-btn">
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                      
+                  </div>
+        </div>
+          </div><!--/.nav-collapse -->
+         
+       
+          </div>
+          
+      
+              
+      </div>
+      </nav>
+  
+      <div class="container theme-showcase" role="main">
+  
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <h1>梯次电池等级评估</h1>
+         
+        
+        </div>
+  
+  
+        <div class="page-header">
+          <h1>满冲满放实验</h1>
+        </div>
+      
+        <!--调整工况-->
+        <button type="button" class="btn btn-danger" data-toggle="collapse" 
+          data-target="#调整工况" id="myButton0" 
+          data-complete-text="工况加载完毕">调整工况</button>
+          <div id="调整工况" class="collapse">
+  
+                <h3>
+                  <span class="label label-default">电池健康状态测试工步</span>
+                </h3>
+                <div class="row">
+                  <div class="col-md-12">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>工作模式</th>
+                          <th>放电电流</th>
+                          <th>终止时间</th>
+                          <th>终止电压</th>
+                          <th>终止容量</th>
+                          <th>NextStep</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>恒流充电</td>
+                          <td>60A</td>
+                          <td>60min</td>
+                          <td>80</td>
+                          <td>60Ah</td>
+                          <td>Next</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>恒流充电</td>
+                          <td>2A</td>
+                          <td>5min</td>
+                          <td></td>
+                          <td></td>
+                          <td>Next</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>静置</td>
+                          <td></td>
+                          <td>30min</td>
+                          <td></td>
+                          <td></td>
+                          <td>Next</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>恒流放电</td>
+                          <td>60A</td>
+                          <td>60min</td>
+                          <td>65V</td>
+                          <td>0Ah</td>
+                          <td>Next</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+          </div>
+        
+  
+  
+  
+  
+        <!--开始测试-->
+        
+          <button type="button" class="btn btn-success" data-toggle="collapse" 
+          data-target="开始测试" id="myButton1" 
+          data-complete-text="测试完毕">开始测试</button>
+        
+        
+  
+            
+            <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">电池容量</span></div>
+            </div>
+            <div class="alert alert-success" role="alert">
+                    <strong>测试完成!</strong> 电池的剩余容量为80%.
+                </div>
+        
+        <div >
+            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+           <div id="main" style="width: 600px;height:400px;"></div>
+           <script type="text/javascript">
+               // 基于准备好的dom，初始化echarts实例
+                   var myChart = echarts.init(document.getElementById('main'));
+  
+                   // 指定图表的配置项和数�?
+                   option = {
+               xAxis: {
+                   type: 'category',
+                   data: [0.0, 0.002591111111111111, 0.0064150000000000006, 0.010069444444444445, 0.013776111111111112, 0.017482499999999998, 0.021202222222222223, 0.02492611111111111, 0.028619722222222223, 0.03233055555555556, 0.03605027777777778, 0.03975694444444444, 0.043446111111111116, 0.04716583333333333, 0.050868055555555555, 0.05457027777777778, 0.058272500000000005, 0.06198333333333333, 0.0657075, 0.06941388888888889, 0.07310333333333334, 0.07680555555555556, 0.08049472222222222, 0.08419277777777778, 0.087895, 0.09158416666666666, 0.095295, 0.09901472222222221, 0.10270833333333333, 0.10641916666666666, 0.11012583333333333, 0.11382805555555556, 0.11753888888888889, 0.1212238888888889, 0.12493916666666667, 0.12862833333333334, 0.13233944444444445, 0.13606333333333331, 0.1397611111111111, 0.14346361111111114, 0.14717444444444444, 0.15085944444444446, 0.15458333333333332, 0.15827249999999998, 0.16198777777777776, 0.1657075, 0.16939222222222222, 0.17309444444444444, 0.17678805555555555, 0.1804947222222222, 0.18422750000000002, 0.18792527777777776, 0.19163194444444445, 0.19532972222222222, 0.19902333333333333, 0.20275166666666666, 0.20644083333333332, 0.21013444444444446, 0.21382805555555554, 0.21753472222222223, 0.22121944444444444, 0.2249175, 0.2286197222222222, 0.2323177777777778, 0.23601111111111112, 0.23970055555555556, 0.24338972222222222, 0.24709194444444443, 0.2507811111111111, 0.25449222222222223, 0.25820750000000003, 0.2619052777777778, 0.2655988888888889, 0.2692925, 0.2729947222222222, 0.2766883333333333, 0.2804036111111111, 0.28412333333333334, 0.2878125, 0.29149722222222224, 0.29519972222222224, 0.29890194444444446, 0.30259555555555556, 0.3062933333333333, 0.31, 0.31368472222222227, 0.3173872222222222, 0.3210894444444444, 0.32480027777777776, 0.3284894444444444, 0.33218305555555555, 0.33587222222222224, 0.33958750000000004, 0.3432811111111111, 0.3470008333333333, 0.3507075, 0.3544097222222222, 0.35810333333333333, 0.36177944444444443, 0.3654775, 0.36917972222222223, 0.37288194444444445, 0.3766319444444444, 0.3803991666666666, 0.384145, 0.3878905555555555, 0.39161444444444443, 0.39539916666666663, 0.3991883333333333, 0.40295555555555557, 0.4067447222222222, 0.41052083333333333, 0.4142925, 0.4180686111111111, 0.4218575, 0.42562055555555556, 0.4293922222222222, 0.4331683333333333, 0.43694444444444447, 0.44072916666666667, 0.4445052777777778, 0.4482811111111111, 0.4520572222222222, 0.4558288888888889, 0.45960944444444446, 0.4633897222222222, 0.46715277777777775, 0.4709113888888889, 0.4747047222222222, 0.47847222222222224, 0.4822263888888889, 0.4859894444444444, 0.4897525, 0.49353305555555554, 0.49732194444444444, 0.5010894444444445, 0.5048652777777778, 0.5086458333333334, 0.5124175, 0.5161977777777778, 0.5199566666666667, 0.5237413888888889, 0.5275216666666667, 0.5312888888888889, 0.5350780555555555, 0.5388325, 0.5426172222222222, 0.5463930555555556, 0.5501561111111111, 0.5539191666666666, 0.5576908333333334, 0.5614669444444444, 0.5652344444444445, 0.5690061111111111, 0.5727647222222222, 0.5765277777777778, 0.580295, 0.5840538888888889, 0.5878211111111111, 0.5915972222222222, 0.5953775, 0.5991580555555556, 0.6029383333333334, 0.60671, 0.6104775, 0.6142533333333333, 0.6180294444444444, 0.6218186111111111, 0.6255988888888889, 0.629375, 0.6331422222222222, 0.6369097222222222, 0.64069, 0.6444575, 0.6482247222222222, 0.6520008333333334, 0.6557941666666667, 0.6595658333333333, 0.6633333333333333, 0.6671222222222222, 0.6708983333333333, 0.6746744444444445, 0.6784505555555556, 0.6822394444444444, 0.6860025, 0.68977, 0.6935458333333333, 0.6973394444444444, 0.7011066666666667, 0.7048827777777777, 0.70865, 0.7124219444444445, 0.7162066666666667, 0.7199783333333334, 0.7237541666666666, 0.7275261111111111, 0.7312933333333334, 0.735073611111111, 0.7388541666666667, 0.7426344444444444, 0.746415, 0.7501822222222222, 0.7539713888888889, 0.7577516666666666, 0.7615233333333333, 0.7652908333333334, 0.7690580555555555, 0.7728472222222222, 0.7766188888888889, 0.7803991666666666, 0.7841708333333333, 0.7879555555555555, 0.79171, 0.7954991666666666, 0.7992794444444444, 0.803051111111111, 0.8068316666666667, 0.8106119444444444, 0.8143922222222222, 0.8181597222222222, 0.8219183333333333, 0.8257030555555556, 0.8294747222222222, 0.8332680555555555, 0.8370355555555555, 0.8408202777777778, 0.8445963888888889, 0.8483636111111111, 0.8521397222222222, 0.8559158333333333],
+                   name: '时间'
+                 },
+               yAxis: {
+                   type: 'value',
+                   name:'电压（V)'
+               },
+               series: [{
+                   data: [4.19362357407511, 4.19370704429135, 3.55624334018034, 3.50082008479077, 3.45724230545461, 3.42011523816009, 3.38888900087303, 3.36258803183698, 3.34078030063658, 3.32235795411434, 3.30671827744218, 3.29293848443673, 3.28007069971268, 3.26606803444897, 3.24548244434941, 3.22742755851727, 3.21174305503171, 3.2020214221252, 3.19370702963006, 3.18567746008755, 3.18014268441119, 3.17287668987648, 3.16797205565536, 3.16487037953112, 3.15980926537933, 3.15459468810867, 3.15026048541417, 3.14478502394786, 3.13980841932976, 3.13425419397817, 3.12918634649841, 3.12482821528337, 3.11968349339368, 3.11497437700007, 3.10955090059745, 3.10462530614586, 3.09941265659568, 3.09470027485257, 3.08979168507009, 3.08495075315632, 3.08003878376821, 3.07529843978848, 3.07057330799721, 3.06626367938711, 3.06169097621654, 3.05732088572903, 3.05305968083665, 3.04887176728747, 3.0443550234752, 3.03997844225972, 3.03561175736888, 3.03087721182762, 3.02674760184592, 3.02266975414011, 3.01865273310312, 3.0133618468951, 3.00794473450282, 3.00284976275503, 2.99892191433194, 2.99499250828074, 2.99109469422303, 2.98727628081534, 2.98283256323722, 2.97885260277647, 2.97534569393041, 2.97099916063611, 2.96679244526088, 2.96270472055253, 2.9576582489293, 2.95265637983011, 2.94785599448666, 2.94291767318002, 2.93797503865244, 2.93298281094924, 2.92775835176501, 2.92268316230589, 2.91739220890064, 2.91201967085175, 2.90660650837299, 2.90062540340223, 2.89460431484683, 2.88834703564733, 2.88180585206767, 2.87496109237331, 2.86778684868595, 2.86047929375103, 2.85306425174618, 2.84488630365631, 2.83641617498875, 2.82800146750019, 2.81896580480127, 2.80888447131106, 2.79851337428815, 2.78703370740011, 2.77351156686476, 2.75888420109707, 2.74242623667521, 2.7230931728366, 2.70005512316808, 2.67192606511733, 2.6365253658804, 2.59070598460498, 2.52875722480942, 2.44253258645254, 2.31097931069326, 2.08533354944138, 1.82227445885843, 2.98619507073795, 3.21427749023586, 3.3304829950271, 3.4017823272763, 3.44971551819923, 3.4833472959354, 3.50872301005198, 3.5285777563696, 3.54438906894841, 3.55811946574318, 3.56914871122499, 3.57888375043226, 3.58749053214379, 3.59477611701883, 3.60142417576739, 3.60731840102333, 3.61303990898883, 3.61768789277595, 3.62213862678156, 3.62622157916097, 3.62992484491249, 3.63340103708335, 3.63654489688248, 3.63926908597415, 3.64234560443728, 3.64492185792709, 3.64739013407572, 3.64971829711894, 3.6517727038952, 3.65388866433985, 3.65578577980358, 3.65765542483251, 3.65928095852614, 3.66096197019179, 3.66212835486539, 3.66374368752569, 3.6651156298456, 3.66644827866148, 3.66763943431219, 3.66883032467602, 3.66959356894204, 3.67101419176713, 3.6720912298242, 3.67278248234607, 3.67380033889511, 3.67437490833615, 3.67549985368152, 3.67575606790534, 3.67683364833962, 3.67741524600543, 3.67795986864958, 3.67880572470254, 3.6792582224099, 3.67960258419351, 3.68027055088757, 3.68075048149345, 3.6814569969995, 3.68155356685523, 3.68187540452083, 3.68254842682265, 3.68278441871636, 3.68310515198047, 3.68332748015279, 3.68383336602844, 3.68395669824978, 3.68421277799183, 3.68461944886081, 3.6848155771235, 3.6850883285144, 3.68532004065845, 3.68544763333307, 3.68564323353598, 3.68610210233667, 3.68597558781851, 3.68638239294151, 3.68617165223932, 3.68693272286721, 3.68678003521334, 3.68670724201434, 3.68709920185306, 3.68709908191773, 3.6873677745487, 3.68740579151089, 3.68758820141971, 3.68751365029349, 3.68791461702515, 3.68804808834721, 3.68798089276329, 3.68802506134224, 3.68838995204678, 3.68832010201426, 3.68845075874563, 3.68843623038039, 3.68839193014648, 3.6888689710934, 3.68899765492933, 3.68893196249808, 3.68920837148959, 3.68915309312576, 3.68903468543196, 3.68943918195612, 3.68939407700423, 3.68961519251568, 3.68941319357196, 3.6895703716567, 3.68976340628954, 3.68957892149844, 3.68976538080381, 3.68994081203524, 3.68995637966829, 3.68996152449866, 3.69000661855217, 3.69005405238945, 3.69007933826236, 3.68993395330065, 3.6902533617651, 3.69018867086159, 3.69051814026709, 3.69019747546159, 3.69040480241143, 3.69052486783482, 3.69056670148193, 3.690640757069],
+                   type: 'line'
+                 
+               }]
+               };
+  
+                   // 使用刚指定的配置项和数据显示图表
+                   myChart.setOption(option);
+           </script>
+          </div>
+  
+  
+       <!--导入运行工况-->
+       <div class="page-header">
+          <h1>导入出厂数据</h1>
+        </div>
+       <button type="button" class="btn btn-danger" data-toggle="collapse" 
+       data-target="#测试数据" id="myButton2" 
+       data-complete-text="同类数据导入完毕">导入同类产品测试数据</button>
+       <div id="测试数据" class="collapse">
+          
+                <!--各工况对电池状态的影响-->
+                <div class="row">
+                  <div class="col-md-4">
+                      <h3>
+                          <span class="label label-default">DOD对电池状态的影响</span>           
+                      </h3>
+                  </div>
+                  <div class="col-md-4">
+                          <h3>
+                              <span class="label label-default">温度对电池状态的影响</span>           
+                          </h3>
+                  </div>
+                  <div class="col-md-4">
+                          <h3>
+                              <span class="label label-default">充放电倍率对电池状态的影响</span>           
+                          </h3>
+                  </div>  
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-4">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>DOD()</th>
+                          <th>T（°C)</th>
+                          <th>C</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                              <th>1</th>
+                              <th>50</th>
+                              <th>25</th>
+                              <th>1</th>
+                        </tr>
+                        <tr>
+                              <th>2</th>
+                              <th>60</th>
+                              <th>25</th>
+                              <th>1</th>
+                        </tr>
+                        <tr>
+                              <th>3</th>
+                              <th>70</th>
+                              <th>25</th>
+                              <th>1</th>
+                        </tr>
+                        <tr>
+                              <th>4</th>
+                              <th>80</th>
+                              <th>25</th>
+                              <th>1</th>
+                        </tr>
+                        <tr>
+                              <th>5</th>
+                              <th>90</th>
+                              <th>25</th>
+                              <th>1</th>
+                        </tr>
+                        <tr>
+                              <th>6</th>
+                              <th>100</th>
+                              <th>25</th>
+                              <th>1</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+  
+                  <div class="col-md-4">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>DOD(%)</th>
+                                <th>T（°C)</th>
+                                <th>C</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                    <th>1</th>
+                                    <th>70</th>
+                                    <th>-20</th>
+                                    <th>1</th>
+                              </tr>
+                              <tr>
+                                      <th>2</th>
+                                      <th>70</th>
+                                      <th>-10</th>
+                                      <th>1</th>
+                                </tr>
+                                <tr>
+                                      <th>3</th>
+                                      <th>70</th>
+                                      <th>0</th>
+                                      <th>1</th>
+                                </tr>
+                                <tr>
+                                      <th>4</th>
+                                      <th>70</th>
+                                      <th>15</th>
+                                      <th>1</th>
+                                </tr>
+                                <tr>
+                                      <th>5</th>
+                                      <th>70</th>
+                                      <th>25</th>
+                                      <th>1</th>
+                                </tr>
+                                <tr>
+                                      <th>6</th>
+                                      <th>70</th>
+                                      <th>40</th>
+                                      <th>1</th>
+                                </tr>
+                                <tr>
+                                      <th>7</th>
+                                      <th>70</th>
+                                      <th>55</th>
+                                      <th>1</th>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+  
+                        <div class="col-md-4">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>DOD()</th>
+                                    <th>T（°C)</th>
+                                    <th>C</th>
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                        <th>1</th>
+                                        <th>70</th>
+                                        <th>25</th>
+                                        <th>0.2</th>
+                                  </tr>
+                                  <tr>
+                                          <th>1</th>
+                                          <th>70</th>
+                                          <th>25</th>
+                                          <th>0.5</th>
+                                    </tr>
+                                    <tr>
+                                          <th>1</th>
+                                          <th>70</th>
+                                          <th>25</th>
+                                          <th>1</th>
+                                    </tr>
+                                    <tr>
+                                          <th>1</th>
+                                          <th>70</th>
+                                          <th>25</th>
+                                          <th>2</th>
+                                    </tr>
+                                </tbody>
+                              </table>
+                            </div>
+  
+  
+              </div>
+        </div>
+        
+        <!--生成工况函数-->
+        <p>
+          <button type="button" class="btn btn-success" data-toggle="collapse" 
+          data-target="#生成工况函数" id="myButton3" 
+          data-complete-text="工况函数生成完毕">生成工况函数</button>
+          <div id="生成工况函数" class="collapse">
+            </p>
+  
+            <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">三元线性回归工况函数为</h3>
+                  </div>
+                  <div class="panel-body">
+                    
+                  
+                  
+                      
+                          SOH_fit_para1=DODfactor*(DOD-0.7)+TEMfactor*(TEM-25°C)+Cfactor*(C-0.3)+e<br/>
+                      
+                          DODfactor=0.1302<br/>
+                          TEMfactor=-1.4*e-5<br/>
+                          Cfactor=-6.476*e-10<br/>
+                      
+                          SOH_fit_para2=DODfactor*(DOD-0.7)+TEMfactor*(TEM-25°C)+Cfactor*(C-0.3)+e<br/>
+                      
+                          TEMfactor=-6.74*e-7<br/>
+                          Cfator=-1.711*e-6<br/>
+                      
+                        </div> 
+                    
+                  
+                </div>
+          </div>
+  
+          <!--导入运行工况-->
+          
+          <div class="page-header">
+                  <h1>导入实际运行工况分布</h1>
+                </div>
+          <button type="button" class="btn btn-success" data-toggle="collapse" 
+          data-target="#导入运行工况" id="myButton4" 
+          data-complete-text="运行工况导入完毕">导入运行工况</button>
+          <div id="导入运行工况" class="collapse">
+          <!---->
+          <div class="row">
+                  <div class="col-md-4">
+                      <h3>
+                          <span class="label label-default">DOD分布</span>           
+                      </h3>
+                  </div>
+                  <div class="col-md-4">
+                          <h3>
+                              <span class="label label-default">温度分布</span>           
+                          </h3>
+                  </div>
+                  <div class="col-md-4">
+                          <h3>
+                              <span class="label label-default">充放电倍率分布</span>           
+                          </h3>
+                  </div>  
+                </div>
+  
+  
+                <div class="row">
+                  <div class="col-md-4">
+                              <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                  <div id="main2" style="width: 400px;height:400px;"></div>
+                  <script type="text/javascript">
+                      // 基于准备好的dom，初始化echarts实例
+                          var myChart = echarts.init(document.getElementById('main2'));
+  
+                          // 指定图表的配置项和数�?
+                          option = {
+                      xAxis: {
+                          type: 'category',
+                          data: [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,1.1,1.2]
+                      },
+                      yAxis: {
+                          type: 'value'
+                      },
+                      series: [{
+                          data: [5,10,20,40,30,25,35,44,56,64,70,50,20],
+                          type: 'line'
+                      }]
+                      };
+  
+                          // 使用刚指定的配置项和数据显示图表�?
+                          myChart.setOption(option);
+                  </script>
+                  </div>
+                  <div class="col-md-4">
+                      <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+          <div id="main3" style="width: 400px;height:400px;"></div>
+          <script type="text/javascript">
+              // 基于准备好的dom，初始化echarts实例
+                  var myChart = echarts.init(document.getElementById('main3'));
+  
+                  // 指定图表的配置项和数�?
+                  option = {
+              xAxis: {
+                  type: 'category',
+                  data: [-10,0,10,20,30,40]
+              },
+              yAxis: {
+                  type: 'value'
+              },
+              series: [{
+                  data: [5,20,40,80,60,30],
+                  type: 'line'
+              }]
+              };
+  
+                  // 使用刚指定的配置项和数据显示图表�?
+                  myChart.setOption(option);
+          </script>
+          </div>
+          <div class="col-md-4">
+              <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+  <div id="main4" style="width: 400px;height:400px;"></div>
+  <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+          var myChart = echarts.init(document.getElementById('main4'));
+  
+          // 指定图表的配置项和数�?
+          option = {
+      xAxis: {
+          type: 'category',
+          data: [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+      },
+      yAxis: {
+          type: 'value'
+      },
+      series: [{
+          data: [5,8,12,17,23,30,40,51,40,20,5],
+          type: 'line'
+      }]
+      };
+  
+      // 使用刚指定的配置项和数据显示图表�?
+      myChart.setOption(option);
+    </script>
+    </div>
+                </div>
+            </div>
+                
+      <!--电池等级评价-->
+        <button type="button" class="btn btn-success" data-toggle="collapse" 
+        data-target="#电池等级评价" id="myButton5" 
+        data-complete-text="电池等级评价完毕">电池等级评价</button>
+        <div id="电池等级评价" class="collapse">
+           <div class="row">
+              <div class="text-center "> 
+                <div class="page-header">
+                    <h1>电池等级评价</h1>
+                </div>
+              </div>
+  
+              <div class="col-md-3"></div>
+                  
+              <div class="col-md-7">
+                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main1" style="width: 600px;height:400px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main1'));
+                option = {
+                title: {
+                    text: '电池等级评价雷达�?'
+                },
+                tooltip: {},
+                legend: {
+                    data: ['标准循环寿命指标','实际电池指标']
+                  
+                },
+                radar: {
+                    // shape: 'circle',
+                    name: {
+                        textStyle: {
+                            color: '#fff',
+                            backgroundColor: '#999',
+                            borderRadius: 3,
+                            padding: [3, 5]
+                      }
+                    },
+                    indicator: [
+                      { name: '充放电深度衰减（DOD）', max: 100},
+                      { name: '温度衰减（TEM）', max: 100},
+                      { name: '充放电倍率衰减（C）', max: 100},
+                      { name: '电池衰减', max: 100},
+                      { name: '电池工况循环', max: 100},
+                      { name: '综合等级', max: 100}
+                    ]
+                },
+                series: [{
+                    name: '预算 vs 开销（Budget vs spending�?',
+                    type: 'radar',
+                    // areaStyle: {normal: {}},
+                    data : [
+                        {
+                            value : [80,80,80,80,80,80],
+                            name : '标准循环寿命指标'
+                        },
+                        {
+                            value : [88,80,71,80,90,83],
+                            name : '实际电池指标'
+                        },
+                    ]
+                  
+                }]
+            };
+  
+                        // 使用刚指定的配置项和数据显示图表�?
+                        myChart.setOption(option);
+                </script>
+                  
+              </div>
+              <div class="col-md-4"></div>
+            </div>
+          </div>
+      
+      
+      <!--电池等级综合报告-->
+          <button type="button" class="btn btn-success" data-toggle="collapse" 
+          data-target="#电池等级综合报告" id="myButton6" 
+          data-complete-text="生成电池报表">电池等级综合报告</button>
+          <div id="电池等级综合报告" class="collapse">
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">电池等级综合评价</h3>
+                  </div>
+                  <div class="panel-body">
+                      <div class="row">
+                          <div class="text-center "> 
+                            { name: '充放电深度衰减（DOD)', 良},<br>
+                            { name: '温度衰减（TEM)', 良},<br>
+                            { name: '充放电倍率衰减（C)',优},<br>
+                            { name: '电池衰减', 优},<br>
+                            { name: '电池工况循环',良},<br>
+                            { name: '综合等级', 优}<br>
+                            综合评价：此电池剩余容量满足要求，同时可以预估此梯次电池不会出现迅速衰减，质量评价为：<br>
+                            <h1>优</h1>
+                          
+                          </div>
+                        </div>
+                  </div>
+                  </div>
+          </div>
+  
+          <script type="text/javascript">
+                $(function() { 
+                              $("#myButton0").click(function(){
+                                $(this).button('loading').delay(1000).queue(function() {
+                                  $(this).button('complete');
+                                });        
+                              });
+                            }); 
+  
+              $(function() { 
+                              $("#myButton1").click(function(){
+                                $(this).button('loading').delay(1000).queue(function() {
+                                  $(this).button('complete');
+                                });        
+                              });
+                            }); 
+  
+              $(function() { 
+                              $("#myButton2").click(function(){
+                                $(this).button('loading').delay(1000).queue(function() {
+                                  $(this).button('complete');
+                                });        
+                              });
+                            }); 
+  
+              $(function() { 
+                $("#myButton3").click(function(){
+                  $(this).button('loading').delay(1000).queue(function() {
+                    $(this).button('complete');
+                  });        
+                });
+              }); 
+  
+              $(function() { 
+                              $("#myButton4").click(function(){
+                                $(this).button('loading').delay(1000).queue(function() {
+                                  $(this).button('complete');
+                                });        
+                              });
+                            }); 
+  
+              $(function() { 
+                $("#myButton5").click(function(){
+                  $(this).button('loading').delay(1000).queue(function() {
+                    $(this).button('complete');
+                  });        
+                });
+              }); 
+  
+               $(function() { 
+                $("#myButton5").click(function(){
+                  $(this).button('loading').delay(1000).queue(function() {
+                    $(this).button('complete');
+                  });        
+                });
+              }); 
+          </script>
+    </body>
+</html>
